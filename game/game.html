@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainy Night</title>
+    <link rel="icon" type="image/x-icon" href="..\img\favicon-RN.png">
+    <link rel="stylesheet" href="..\.ignore\reset.css">
+    <link rel="stylesheet" href="game.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=M+Icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  </head>
+
+<body>
+
+<div class="audio-container">
+  <audio id="rain-audio" autoplay muted loop>
+    <source src="..\audio\rain.mp3" type="audio/mp3">
+    no audio.
+  </audio>
+
+  <span id="volumeOn" class="material-symbols-outlined"> volume_up </span>
+  <span id="volumeOff" class="material-symbols-outlined"> volume_off </span>
+
+</div>
+
+<audio id="caixa-audio" hidden>
+  <source src="..\audio\abrir-caixa.mp3" type="audio/mp3">
+  no audio.
+</audio>
+
+    <section id="gameSec">      
+
+      <img id="img1" src="..\img\pc-zoom.png" alt="">
+      <img id="img2" src="..\img\pc-area-de-trabalho.png" alt="">
+      
+      
+        <div id="divAlt" class="opac divAlt1">
+          <p id="divTexto"> NOVA MENSAGEM!<br>Autor:Anjo da Morte</p>
+        </div>
+      
+
+      <div>
+        <p id="legenda" class="digitando">Uma noite chuvosa lá fora, eu dentro do apartamento, mais um dia comum...</p>
+        <div id="escolhas"> 
+          <button onclick="escolher(1)"">Ver Mensagem</button>
+          <button onclick="escolher(2)"">Ignorar Mensagem</button>
+        </div>
+      </div>
+
+    </section>
+    
+    <script type="text/javascript" src="game.js"></script>
+</body>
+</html>

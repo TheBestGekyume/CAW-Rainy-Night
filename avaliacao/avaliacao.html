@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainy Night</title>
+    <link rel="icon" type="image/x-icon" href="..\img\favicon-RN.png">
+    <link rel="stylesheet" href="..\.ignore\reset.css">
+    <link rel="stylesheet" href="avaliacao.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"> -->
+</head>
+
+<body>
+
+    <header class="centralizar">
+        <img src="..\img\headerImg.png" alt="Header-Rainy-Night">    
+    </header>
+
+    <aside>
+        <h3>Jogue Também!</h3>
+        <a href="https://www.cultofthelamb.com/" target="_blank"><img src="..\img\anuncio.jpg" alt=""></a>
+        <h3>Cult Of The Lamb</h3>
+    </aside>
+
+    <h2>Obrigado por jogar!<br>Avalie o jogo!</h2>
+    
+
+    <section class="centralizar">
+
+        <form>
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="comentario">Comentário</label>
+            <textarea id="comentario" name="comentario" rows="4" required></textarea>
+
+            <label for="comentario">Avaliação</label>
+
+            <div id="estrelas">
+                <input type="radio" id="estrela5" name="avaliar" value="5"/>
+                <label for="estrela5" title="5 estrelas">&#9733;</label>
+                <input type="radio" id="estrela4" name="avaliar" value="4" />
+                <label for="estrela4" title="4 estrelas">&#9733;</label>
+                <input type="radio" id="estrela3" name="avaliar" value="3" />
+                <label for="estrela3" title="3 estrelas">&#9733;</label>
+                <input type="radio" id="estrela2" name="avaliar" value="2" />
+                <label for="estrela2" title="2 estrelas">&#9733;</label>
+                <input type="radio" id="estrela1" name="avaliar" value="1" />
+                <label for="estrela1" title="1 estrela">&#9733;</label>
+            </div>
+
+            <button type="button" onclick="enviarAvaliacao()">Enviar</button>
+
+        </form>
+    </section>
+    
+    
+
+    <div id="avaliacoes" class="centralizar">
+         <h2>Avaliação dos Jogadores</h2> 
+    </div>
+
+    
+
+    <footer>
+        <a href="..\index.html">Home Page</a> 
+        <a href="..\game\game.html">Jogue Rainy Night</a>
+        <p> Rainy Night Copyright ©</p>
+    </footer>
+
+    <script type="text/javascript" src="avaliacao.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainy Night</title>
+    <link rel="icon" type="image/x-icon" href="img\favicon-RN.png">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href=".ignore\reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="centralizar">
+        <img src="img\headerImg.png" alt="Header-Rainy-Night">
+    </header>
+
+    <section>
+        <div class="centralizar">
+            <h2>Rainy Night é um curto jogo de terror, o qual seu desfecho é construído <br>
+                pela tomada de decisão do jogador, então, escolha cuidadosamente.</h2>
+            <h3><br>[ clique na imagem para começar ]</h3>
+        </div>
+
+        <div class="centralizar">
+            <img id="imgOff" src="img\pc-off.png" alt="">
+            <img onclick="abrirModal()" id="imgOn" src="img/pc-RN.png" alt="">
+        </div>
+    </section>
+
+    <section id="modal">
+        <div id="conteudo">
+            <span id="fechar" onclick="fecharModal()">&times;</span>
+            <form id="loginForm" onsubmit="event.preventDefault();">
+                <input type="text" id="usuario" placeholder="Usuario">
+                <input type="password" placeholder="Senha">
+                <input type="submit" onclick="paraGame()">
+            </form>
+            <img src="img\pc-login.png" alt="">
+        </div>
+    </section>
+
+
+    <footer>
+        <a href="..\game\game.html">Jogue Rainy Night</a>
+        <a href="..\avaliacao\avaliacao.html">Avalie Rainy Night</a>
+        <p> Rainy Night Copyright ©</p>
+    </footer>
+
+
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>
