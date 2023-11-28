@@ -70,7 +70,7 @@ button:hover{
     overflow: hidden;
     white-space: pre;
     /* border-right: 5px solid white; */
-    animation: digitação 3s steps(45) 1;
+    animation: digitação 2.5s steps(45) 1;
 }
 
 .opac{
@@ -143,7 +143,6 @@ button:hover{
     font-size: 4em;
     border-radius: 20px;
 }
-
 
 
 #divTexto{

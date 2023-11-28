@@ -100,13 +100,6 @@ button:hover, input:hover, textarea:hover{
     align-items: center;
 }
 
-section.centralizar {
-    max-width: 120%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
 
 #estrelas {
     display: flex;
@@ -191,7 +184,7 @@ aside img {
 }
 
 .novaAvaliacao{
-    display:inline-block ;
+    /* display:inline-block ; */
     text-align: start;
     font-size: larger;
     max-width: auto;
