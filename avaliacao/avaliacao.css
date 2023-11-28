@@ -1,10 +1,8 @@
 body{
-    /* min-height: 700px; */
     height: auto;
     color: #fff;
     background-color: #302648;
     background-image:linear-gradient(to bottom, #442e73, #171223 );
-    /* background-image:linear-gradient(to bottom, #1D2225, #1D2225, #33383C); */
     font-family: 'Lato', sans-serif !important;
     text-align: center;
     
@@ -14,11 +12,9 @@ header{
     position: relative;
     height: 400px;
     width: auto;
-    /* background-color: #261e38; */
     transition-duration:3s ;
     transition-delay: 4s;
     transition-timing-function: ease-out;
-    /* margin-bottom: 10px; */
     z-index: 2;
 }
 
@@ -40,20 +36,15 @@ header:hover{
     transition-delay: 0s;
 }
 
-/* .clearfix {
-    overflow: auto;
-} */
-
 h2{
-    clear: left;
     margin-block: 40px;
     font-size: 26px;
 }
 
-
 form {
     display: inline-block;
-    max-width: 50%;
+    width: 40%;
+    max-width: 70%;
     padding: 20px;
     border-radius: 20px;
     border: #62228f 1px solid;
@@ -91,7 +82,6 @@ button:hover, input:hover, textarea:hover{
     background-color:#000000 ;
     border: 2px solid #62228f;
 }
-
 
 .centralizar{
     position: flex;
@@ -147,7 +137,6 @@ footer p {
     padding: 10px;
 }
 
-
 aside{
     position: sticky;
     float: right;
@@ -162,7 +151,6 @@ aside{
     overflow-y: auto;
 
 }
-  
 
 aside h3{
     font-size: large;
@@ -180,14 +168,13 @@ aside img {
     justify-content: center;
     align-items: center;
     text-align: center;
-    max-width: 50%;
+    max-width: 70%;
 }
 
 .novaAvaliacao{
-    /* display:inline-block ; */
+    display:inline-block ;
     text-align: start;
     font-size: larger;
-    max-width: auto;
     padding: 10px 25px;
     margin: 20px;
     border: #62228f 1px solid;

@@ -1,6 +1,5 @@
 let modal = document.getElementById('modal');
 
-
 function abrirModal(){
   modal.style.display = 'flex';
 }
@@ -11,7 +10,11 @@ function fecharModal(){
 
 function paraGame(){
   let nome = document.getElementById("usuario").value;
+  if (!nome){
+    alert('Insira o seu nome para prosseguir.');
+  }else{
   alert(nome + ', use fones de ouvido para ter a experiência completa.');
   window.location.href = 'game/game.html';
+  }
 }
 

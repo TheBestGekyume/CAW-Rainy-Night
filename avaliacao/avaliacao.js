@@ -19,7 +19,6 @@ function enviarAvaliacao() {
         }
 
         avaliacoesSection.appendChild(novaAvaliacao);
-
         document.getElementById('nome').value = '';
         document.getElementById('comentario').value = '';
         avaliar.checked = false;
