@@ -9,13 +9,13 @@ function enviarAvaliacao() {
         novaAvaliacao.classList.add('novaAvaliacao');
 
         if (avaliar.value > 1) {
-            novaAvaliacao.innerHTML = '<p>Nome: ' + nome + '</p>' +
+            novaAvaliacao.innerHTML = '<p>Jogador: ' + nome + '</p>' +
                 '<p>Comentário: ' + comentario + '</p>' +
-                '<p>Avaliação: ' + avaliar.value + ' estrelas</p>';
+                '<p>' + avaliar.value + ' estrelas</p>';
         } else {
-            novaAvaliacao.innerHTML = '<p>Nome: ' + nome + '</p>' +
-                '<p>Comentário: ' + comentario + '</p>' +
-                '<p>Avaliação: ' + avaliar.value + ' estrela</p>';
+            novaAvaliacao.innerHTML = '<p>Jogador: ' + nome + '</p>' +
+                '<p> Comentário: ' + comentario + '</p>'+
+                '<p>' + avaliar.value + ' estrela</p>';
         }
 
         avaliacoesSection.appendChild(novaAvaliacao);

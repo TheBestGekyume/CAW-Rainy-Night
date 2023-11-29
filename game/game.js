@@ -2,10 +2,10 @@ let cont = 0;
 let legenda = document.getElementById('legenda');
 let img = document.getElementById('img2');
 let divEscolhas = document.getElementById('escolhas');
-let divAlt = document.getElementById("divAlt"); //div que será manipulada (divAlteração)
-let textoAlt = document.getElementById("divTexto");
-const chuva = document.getElementById("rain-audio");
-const musica = document.getElementById("caixa-audio");
+let divAlt = document.getElementById('divAlt'); //div que será manipulada (divAlteração)
+let textoAlt = document.getElementById('divTexto');
+const chuva = document.getElementById('rain-audio');
+const musica = document.getElementById('caixa-audio');
 
 chuva.volume = 0.1;
 chuva.muted = false; // a chuva é "desmutada" no javascript para que "chuva.volume = 0.1" carregue junto com audio
@@ -27,9 +27,9 @@ function efeitoDigit() {
 }
 
 function exibirDivAlt() {
-        divAlt.style.display = "flex";
-        divAlt.style.opacity = 1;
-    }
+    divAlt.style.display = "flex";
+    divAlt.style.opacity = 1;
+}
 
 function receberMsg() {
     legenda.textContent = 'Quem é esse? [Você recebeu uma mensagem de um desconhecido]';
@@ -39,11 +39,9 @@ function receberMsg() {
 function imagemOpac(n) {
 
     img.style.transition = "opacity 1s 0.5s";
-
     if (n != 1 && n != 0) {
         img.style.transition = "opacity 4s 0.5s";
     }
-
     if (n != 0) {
         n = 1;
     }
@@ -68,13 +66,11 @@ function fimDeJogo(){
     divAlt.classList.add('divAlt4');
     divAlt.innerHTML = '<h2>FIM DE JOGO</h2>'
     divEscolhas.innerHTML = '<a href="game.html"> <button>Jogar Novamente</button> </a>' +
-            '<a href="../avaliacao/avaliacao.html"><button>Avaliar o Jogo</button></a>';
+            '<a href="../avaliacao/avaliacao.html"><button>Avaliar o Jogo</button></a>' +
+            '<a href="../index.html"><button>Home Page</button></a>';
 }
 
 document.addEventListener("DOMContentLoaded", imagemOpac);
-// document.addEventListener("DOMContentLoaded", delay(receberMsg, 4500));
-// document.addEventListener("DOMContentLoaded", delay(exibirDivEscolhas, 6500));
-
 document.addEventListener("DOMContentLoaded", delay(exibirDivAlt, 5000));
 document.addEventListener("DOMContentLoaded", delay(receberMsg, 6000));
 document.addEventListener("DOMContentLoaded", delay(exibirDivEscolhas, 7500));
@@ -93,9 +89,7 @@ function aux(opc) {
         case 2: //ATENDER OU NÃO A PORTA
             divAlt.innerHTML = '<audio autoplay hidden> ' +
                 '<source src="../audio/campainha.mp3" type="audio/mp3"></audio>';
-
             novaLegenda('[01:00 Hora e a campainha toca]');
-
             if (cont != 1) {
                 divEscolhas.innerHTML = '<button onclick="aux(3)">Continuar</button>';
             } else {
@@ -105,11 +99,9 @@ function aux(opc) {
             break;
 
         case 3: //PEGAR PACOTE OU NÃO PACOTE
-
             divAlt.innerHTML = '<audio autoplay hidden> ' +
                 '<source src="../audio/abrir-porta.mp3" type="audio/mp3"></audio>'
             novaLegenda('[Você abre a porta, sente um frio na espinha, e lá está um pacote, bem na frente da sua porta]');
-
             if (cont != 1) {
                 divEscolhas.innerHTML = '<button onclick="aux(4)">Continuar</button>';
             } else {
@@ -153,9 +145,9 @@ function aux(opc) {
             divEscolhas.innerHTML = '<audio autoplay hidden> ' +
                 '<source src="../audio/ossos-quebrando.mp3" type="audio/mp3"></audio>' +
                 '<a href="game.html"> <button>Jogar Novamente</button> </a>' +
-                '<a href="../avaliacao/avaliacao.html"><button>Avaliar o Jogo</button></a>';
+                '<a href="../avaliacao/avaliacao.html"><button>Avaliar o Jogo</button></a>' +
+                '<a href="../index.html"><button>Home Page</button></a>';
             break;
-
 
         case 9: //RECEBER CAIXA E IR DORMIR
             novaLegenda('Enfim, já está tarde, amanhã eu preciso acordar cedo para trabalhar.');
@@ -164,7 +156,6 @@ function aux(opc) {
 
         case 10: //ACORDAR 1/2
             chuva.muted = true;
-            //TROCAR PRA IMAGEM DE MANHÃ SEM CHUVA COM A CAIXA NA MESA
             novaLegenda('[Você acorda e tudo parece perfeitamente normal]');
             divEscolhas.innerHTML = '<button onclick="aux(11)">Continuar</button>';
             break;
@@ -199,16 +190,10 @@ function aux(opc) {
         case 15: //ESPEROU A CHUVA PASSAR E NÃO ABRIU A CAIXA(FIM DE JOGO)
             fimDeJogo();
             novaLegenda('Isso já passou dos limites, eu preciso dormir o resto da noite e ir trabalhar.');
-            // divEscolhas.innerHTML = '<button onclick="aux(12)">Abrir</button>' + 
-            // '<button onclick="aux(15)">Não Abrir</button>';
             break;
-
-        // default: 
-        //     alert("ERROR");
         
     }
 }
-
 
 function escolher(option) {
 
@@ -216,16 +201,11 @@ function escolher(option) {
 
     switch (option) {
         case 1: //VER MENSAGEM
-
             novaLegenda('[Você abre a mensagem e lê]');
-
             divAlt.classList.remove('divAlt1');
             divAlt.classList.remove('divAlt3');
-
             divAlt.classList.add('divAlt2');
-
             divAlt.style.opacity = 1;
-
             textoAlt.textContent = 'Anjo da Morte\n\n' +
                 'Você receberá um pacote na sua casa hoje, as uma\nhora da manhã, ' +
                 'se você pegá-la tudo ficará bem,caso\ncontrário eu não poderei garantir a sua segurança.';
@@ -348,6 +328,7 @@ function escolher(option) {
             break;
 
         case 15: //IR DORMIR OU SE MOVER SEM A CAIXA
+            imagemOpac(0);
             transicao();
             divAlt.innerHTML = '<audio autoplay hidden> ' +
                 '<source src="../audio/abrir-porta.mp3" type="audio/mp3"></audio>';
@@ -365,6 +346,7 @@ function escolher(option) {
             break;
 
         case 17: //MORTE POR ATAQUE(FIM DE JOGO)
+            imagemOpac(0);
             fimDeJogo();
             divAlt.innerHTML = '<audio autoplay hidden> ' +
                 '<source src="../audio/morte.mp3" type="audio/mp3"></audio>' +
@@ -425,4 +407,3 @@ document.addEventListener("DOMContentLoaded", function () {
         volumeOff.style.display = "none";
     });
 });
-

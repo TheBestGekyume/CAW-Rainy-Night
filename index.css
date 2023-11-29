@@ -1,15 +1,12 @@
 body {
-    height: 100%;
     color: #fff;
     background-image: linear-gradient(to bottom, #442e73, #171223);
-    /* background-image:linear-gradient(to bottom, #1D2225, #1D2225, #33383C); */
     font-family: 'Lato', sans-serif !important;
 }
 
 header {
     height: 400px;
     width: auto;
-    /* background-color: #261e38; */
     transition-duration: 3s;
     transition-delay: 4s;
     transition-timing-function: ease-out;
@@ -37,7 +34,6 @@ header:hover {
     from {
         color: #ff0000;
     }
-
     to {
         color: #ffffff;
     }
@@ -139,7 +135,7 @@ a:hover {
 }
 
 #usuario,
-#loginForm input[type=password] {
+form input[type=password] {
     width: 50%;
     padding: 5px;
     margin: 5px 0;
@@ -150,7 +146,7 @@ a:hover {
     color: white;
 }
 
-#loginForm input[type=submit] {
+form input[type=submit] {
     width: 50%;
     background-color: #62228f;
     color: white;
@@ -163,7 +159,7 @@ a:hover {
     transition-duration: 500ms;
 }
 
-#loginForm input[type=submit]:hover {
+form input[type=submit]:hover {
     background-color: #62228fa1;
 }
 
@@ -200,9 +196,6 @@ button:hover {
     transition-duration: 1.2s;
     transition-delay: 9999s;
     background-color: #00000066;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
 }
 
 #modal:hover {

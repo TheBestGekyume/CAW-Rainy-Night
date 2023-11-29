@@ -13,15 +13,6 @@ section{
     text-align: center;
 }
 
-/* section img{
-    top: 15px;
-    top: 15px;
-    position: absolute;
-    box-shadow: 0px 2px 15px 2px #ffffff;
-    max-width: 75%;
-    max-height: 75%;
-} */
-
 #img1, #img2{
     top: -28px;
     position: absolute;
@@ -51,7 +42,6 @@ button{
     transition-delay: 150ms;
     background-color:#3e3e3e;
     cursor: pointer;
-    /* color: rgb(138, 138, 138); */
 }
 
 button:hover{
@@ -69,14 +59,12 @@ button:hover{
 .digitando{
     overflow: hidden;
     white-space: pre;
-    /* border-right: 5px solid white; */
     animation: digitação 2.5s steps(45) 1;
 }
 
 .opac{
     opacity: 0;
 }
-
 
 .divAlt1, .divAlt2, .divAlt3, .divAlt4{
     display: none; 
@@ -92,7 +80,6 @@ button:hover{
 }
 
 .divAlt1{
-    /* opacity: unset; */
     background-color: #5902aa;
     box-shadow: 0 0 4px 4px #5902aa;
     top: 115px; 
@@ -116,7 +103,6 @@ button:hover{
 
 .divAlt3{
     display: block !important;
-    /* opacity: unset; */
     text-align: center;
     background-color: #5902aa;
     box-shadow: 0 0 4px 4px #5902aa;
@@ -136,14 +122,12 @@ button:hover{
     display: block;
     text-align: center;
     background-color: transparent !important;
-    /* box-shadow: 0 0 50px 20px #aa0202; */
     top: 100px; 
     left: 485px;
     padding: 10px;
     font-size: 4em;
     border-radius: 20px;
 }
-
 
 #divTexto{
     margin: 0;
@@ -161,7 +145,7 @@ button:hover{
     padding-top: 20px;
 }
 
-.audio-container {
+.audio-controle {
     text-align: right;
   }
   

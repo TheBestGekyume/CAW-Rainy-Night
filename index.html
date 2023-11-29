@@ -28,15 +28,15 @@
         </div>
 
         <div class="centralizar">
-            <img id="imgOff" src="img\pc-off.png" alt="">
-            <img onclick="abrirModal()" id="imgOn" src="img/pc-RN.png" alt="">
+            <img src="img\pc-off.png">
+            <img onclick="abrirModal()" id="imgOn" src="img/pc-RN.png">
         </div>
     </section>
 
-    <section id="modal">
+    <section id="modal" class="centralizar">
         <div id="conteudo">
             <span id="fechar" onclick="fecharModal()">&times;</span>
-            <form id="loginForm" onsubmit="event.preventDefault();">
+            <form onsubmit="event.preventDefault();">
                 <input type="text" id="usuario" placeholder="Usuario">
                 <input type="password" placeholder="Senha">
                 <input type="submit" onclick="paraGame()">
